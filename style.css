@@ -467,6 +467,34 @@ a {
   scale: 120%;
 }
 
+/* ============ PARTNER CARABICARA ==================== */
+.logo-slider {
+  overflow: hidden;
+  background-color: #f9fbff;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.logo-track img {
+  height: 60px;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* =============== Course Levels =============== */
 .levels-section {
   padding: 5rem 1rem;
@@ -678,42 +706,111 @@ a {
 }
 
 /* Kartu instruktur */
+.instructor-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
 .instructor-card {
-  flex: 0 0 calc((100% - 60px) / 4); /* 4 kartu + 3 gap = 60px total gap */
-  background-color: #111;
-  color: white;
+  position: relative;
+  flex: 0 0 calc((100% - 60px) / 4); /* 4 kartu per baris */
   border-radius: 12px;
   overflow: hidden;
-  text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .instructor-card img {
   width: 100%;
-  height: 300px;
+  height: 500px;
   object-fit: cover;
+  display: block;
 }
 
-.card-text {
-  padding: 16px;
+.instructor-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: white;
+  text-align: center;
 }
 
-.card-text h3 {
+.instructor-card .overlay h3 {
   margin: 0;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.card-text p {
+.instructor-card .overlay p {
   margin-top: 6px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #ccc;
 }
 
-/* Responsive untuk mobile */
+/* Tombol navigasi carousel */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 1024px) {
+  .instructor-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+  }
+}
+
+/* Responsif untuk mobile */
 @media (max-width: 768px) {
   .instructor-card {
-    flex: 0 0 calc((100% - 20px) / 2); /* 2 kartu + 1 gap */
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 
   .instructor-card img {
@@ -723,6 +820,17 @@ a {
   .carousel-button {
     font-size: 1.8rem;
     padding: 8px;
+  }
+}
+
+/* Responsif untuk HP kecil */
+@media (max-width: 480px) {
+  .instructor-card {
+    flex: 0 0 100%;
+  }
+
+  .instructor-card img {
+    height: 200px;
   }
 }
 
