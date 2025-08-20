@@ -83,3 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(0px)`;
   });
 });
+
+// FAQ
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  question.addEventListener("click", () => {
+    item.classList.toggle("active");
+  });
+});

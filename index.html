@@ -26,11 +26,12 @@
 
         <!-- Link Navigasi -->
         <ul class="nav-links" id="nav-links">
-          <li><a href="#courses">Program</a></li>
           <li><a href="#about">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#level">Level</a></li>
+          <li><a href="#mentor">Mentor</a></li>
           <li><a href="#testimonials">Testimoni</a></li>
-          <li><a href="#contact">Kontak</a></li>
-          <li><button class="btn">Daftar Sekarang</button></li>
+          <li><a href="#kontak" class="btn">Daftar Sekarang</a></li>
         </ul>
       </div>
     </nav>
@@ -58,23 +59,29 @@
             metode mentorship dan game-based learning.
           </p>
           <div class="hero-buttons">
-            <button class="btn large blue">▶ Mulai Sekarang</button>
-            <button class="btn-outline large">Lihat Kurikulum</button>
+            <a href="#program" class="btn large blue">▶ Mulai Sekarang</a>
+            <a href="#kontak" class="btn-outline large">Gabung Carabicara!</a>
           </div>
           <div class="hero-stats">
             <div class="students">
               <div class="avatars">
                 <div class="avatar">
-                  <img src="img/septian.jpg" alt="">
+                  <img src="img/ulasan1.jpg" alt="">
                 </div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
-                <div class="avatar"></div>
+                <div class="avatar">
+                  <img src="img/ulasan1.jpg" alt="">
+                </div>
+                <div class="avatar">
+                  <img src="img/ulasan1.jpg" alt="">
+                </div>
+                <div class="avatar">
+                  <img src="img/ulasan1.jpg" alt="">
+                </div>
               </div>
-              <span>5.000+ siswa aktif</span>
+              <span>200+ siswa</span>
             </div>
-            <div class="rating">★ 4.9/5 <span>(1.200+ ulasan)</span></div>
-          </div>
+            <div class="rating">★ 4.9/5 <span>(179++ ulasan)</span></div>
+          </div>  
         </div>
 
         <!-- Box Kelas Hari Ini -->
@@ -99,10 +106,10 @@
     </section>
 
     <!-- === Fitur Unggulan === -->
-    <section id="courses" class="features-section">
+    <section id="about" class="features-section">
       <div class="container text-center">
-        <h2>Mengapa Memilih CaraBicara?</h2>
-        <p>
+        <h2 class="section-title">Mengapa Memilih CaraBicara?</h2>
+        <p class="section-subtitle p-title">
           Tempat belajar komunikasi dan public speaking yang sudah
           tersertifikasi IPSA, dengan metode yang fun, sistematis, dan terbukti
           efektif!
@@ -159,6 +166,7 @@
 
     <!-- === PARTNER CARABICARA === -->
     <div class="logo-slider">
+      <h4>50+ lembaga dan instansi telah menggunakan layanan kami</h4>
       <div class="logo-track">
         <!-- Set 1: Logo Asli -->
         <img src="img/logo1.png" alt="Logo 1" />
@@ -192,11 +200,79 @@
       </div>
     </div>
 
-    <!-- === Program Pembelajaran === -->
-    <section class="levels-section">
-      <div class="container text-center">
-        <h2>Level Program CaraBicara</h2>
+<!-- === Pilih Program Gaya Belajarmu === -->
+<section id="program" class="program-section">
+  <div class="container">
+    <h2 class="section-title">Pilih Program Sesuai Gayamu</h2>
+    <p class="section-subtitle p-title">
+      Program fleksibel yang bisa kamu pilih sesuai waktu, kebutuhan, dan
+      gaya belajar.
+    </p>
+
+    <!-- Grid Atas -->
+    <div class="program-grid program-grid-top">
+      <div class="program-card">
+        <img src="img/reguler.png" alt="Regular" class="program-image" />
+        <h3>Kelas Reguler</h3>
         <p>
+          Kelas berisi 5–7 siswa dengan harga terjangkau. Belajar sambil
+          diskusi dan bermain.
+        </p>
+      </div>
+
+      <div class="program-card">
+        <img src="img/privat.png" alt="Private" class="program-image" />
+        <h3>Kelas Privat</h3>
+        <p>
+          Kelas 1–2 orang, cocok untuk kamu yang ingin pendampingan personal
+          dan fleksibel waktunya.
+        </p>
+      </div>
+
+      <div class="program-card">
+        <img src="img/online.png" alt="Online" class="program-image" />
+        <h3>Kelas Online</h3>
+        <p>
+          (khusus siswa diluar malang)
+        </p>
+        <p>
+          Belajar di mana saja dengan platform yang sudah terintegrasi
+          dengan aplikasi SIDIGS. <br>
+        </p>
+      </div>
+    </div>
+
+    <!-- Grid Bawah -->
+    <div class="program-grid program-grid-bottom">
+      <div class="program-card">
+        <img
+          src="img/special.png"
+          alt="Special Class"
+          class="program-image"
+        />
+        <h3>Special Class</h3>
+        <p>
+          Program spesial seperti kelas Pageant, TV Anchor, MC Class, dan
+          persiapan lomba nasional.
+        </p>
+      </div>
+
+      <div class="program-card">
+        <img src="img/institusi.png" alt="Institusi" class="program-image" />
+        <h3>Kelas Institusi</h3>
+        <p>
+          Pelatihan komunikasi untuk sekolah & perusahaan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- === Program Pembelajaran === -->
+    <section id="level" class="levels-section">
+      <div class="container text-center">
+        <h2 class="section-title">Level Program CaraBicara</h2>
+        <p class="section-subtitle p-title">
           Tersedia kelas dari pra-beginner hingga advance, sesuai usia dan
           kebutuhan kamu.
         </p>
@@ -204,7 +280,7 @@
           <!-- Pre-Beginner -->
           <div class="level-card beginner">
             <div class="level-header green"></div>
-            <span class="badge green">7+ Tahun</span>
+            <span class="badge green">Core Class 7+ Tahun</span>
             <h3>Creativity & Speak Up</h3>
             <p>
               Kelas pengembangan kreativitas dan komunikasi ringan untuk
@@ -216,13 +292,13 @@
               <li>✔ Laporan belajar berkala</li>
               <li>✔ Durasi 4 bulan (1x/minggu)</li>
             </ul>
-            <button class="btn full">Gabung Sekarang</button>
+            <a href="#kontak" class="btn full">Gabung Sekarang</a>
           </div>
 
           <!-- Beginner / Teen -->
           <div class="level-card intermediate popular">
             <div class="level-header blue"></div>
-            <span class="badge blue">13+ Tahun</span>
+            <span class="badge blue">Core Class 13+ Tahun</span>
             <h3>Basic Public Speaking</h3>
             <p>
               Kelas untuk remaja yang ingin lebih percaya diri tampil dan
@@ -234,7 +310,7 @@
               <li>✔ Game & mentorship</li>
               <li>✔ Sertifikat IPSA</li>
             </ul>
-            <button class="btn full blue">Gabung Sekarang</button>
+            <a href="#kontak" class="btn full">Gabung Sekarang</a>
           </div>
 
           <!-- Advance / Dewasa -->
@@ -251,90 +327,21 @@
               <li>✔ Pageant Preps</li>
               <li>✔ TV/News Anchor</li>
             </ul>
-            <button class="btn full purple">Gabung Sekarang</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- === Pilih Program Gaya Belajarmu === -->
-    <section class="program-section">
-      <div class="container">
-        <h2 class="section-title">Pilih Program Sesuai Gayamu</h2>
-        <p class="section-subtitle">
-          Program fleksibel yang bisa kamu pilih sesuai waktu, kebutuhan, dan
-          gaya belajar.
-        </p>
-
-        <!-- Grid Atas -->
-        <div class="program-grid program-grid-top">
-          <div class="program-card">
-            <img src="img/reguler.png" alt="Regular" class="program-image" />
-            <h3>Kelas Reguler</h3>
-            <p>
-              Kelas berisi 5–7 siswa dengan harga terjangkau. Belajar sambil
-              diskusi dan bermain.
-            </p>
-          </div>
-
-          <div class="program-card">
-            <img src="img/privat.png" alt="Private" class="program-image" />
-            <h3>Kelas Privat</h3>
-            <p>
-              Kelas 1–2 orang, cocok untuk kamu yang ingin pendampingan personal
-              dan fleksibel waktunya.
-            </p>
-          </div>
-
-          <div class="program-card">
-            <img src="img/online.png" alt="Online" class="program-image" />
-            <h3>Kelas Online</h3>
-            <p>
-              (khusus siswa diluar malang)
-            </p>
-            <p>
-              Belajar di mana saja dengan platform yang sudah terintegrasi
-              dengan aplikasi SIDIGS. <br>
-            </p>
-          </div>
-        </div>
-
-        <!-- Grid Bawah -->
-        <div class="program-grid program-grid-bottom">
-          <div class="program-card">
-            <img
-              src="img/special.png"
-              alt="Special Class"
-              class="program-image"
-            />
-            <h3>Special Class</h3>
-            <p>
-              Program spesial seperti kelas Pageant, TV Anchor, MC Class, dan
-              persiapan lomba nasional.
-            </p>
-          </div>
-
-          <div class="program-card">
-            <img src="img/institusi.png" alt="Institusi" class="program-image" />
-            <h3>Kelas Institusi</h3>
-            <p>
-              Pelatihan komunikasi untuk sekolah & perusahaan.
-            </p>
+            <a href="#kontak" class="btn full">Gabung Sekarang</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- === Mentor === -->
+    <section id="mentor">
     <div class="instructor-section">
-      <h2 class="section-title">CARABICARA'S MENTORS</h2>
-      
+      <h2 class="section-title">Mentor Carabicara </h2>
+      <p class="section-subtitle p-title">Didukung mentor berprestasi dan berpengalaman di bidang komunikasi, Carabicara memastikan pembelajaran yang berkualitas dan berdampak nyata.</p>
       <div class="carousel-wrapper">
         <button class="carousel-button left">&#10094;</button>
-        
         <div class="carousel-container">
           <div class="carousel-track">
-            
             <div class="instructor-card">
               <img src="img/danar_2.jpg" alt="Danar Indra">
               <div class="overlay">
@@ -360,7 +367,7 @@
             </div>
     
             <div class="instructor-card">
-              <img src="images/husin.jpg" alt="Fani Keinarra">
+              <img src="img/fani.jpeg" alt="Fani Keinarra">
               <div class="overlay">
                 <h3>Fani Keinarra</h3>
                 <p>MC, Radio Presenter, Certified Digital Marketing of BNSP Duta Hijab, Kakang Mbakyu 2023</p>
@@ -390,19 +397,18 @@
                 <p>Expertise Description</p>
               </div>
             </div>
-    
           </div>
         </div>
-    
         <button class="carousel-button right">&#10095;</button>
       </div>
     </div>
+  </section>
 
      <!-- === Testimoni === -->
      <section id="testimonials" class="testimonials-section">
       <div class="container text-center">
-        <h2>Apa Kata Mereka?</h2>
-        <p>
+        <h2 class="section-title">Apa Kata Mereka?</h2>
+        <p class="section-subtitle p-title">
           Mereka telah membuktikan bahwa #PintarSajaTidakCukup, komunikasi adalah kunci keberhasilan!
         </p>
         <div class="testimonials-grid">
@@ -452,74 +458,138 @@
       </div>
     </section>
 
+    <section class="faq">
+      <!-- LEFT CONTENT -->
+      <div class="faq-left">
+        <h4>F.A.Q</h4>
+        <h2>Pertanyaan Yang Sering <span>Ditanyakan</span></h2>
+        <p>
+          Kamu bisa DM ke Instagram <b>@bisacarabicara</b> atau <br> hubungi Admin di 
+          nomor <b>0811-9708-700</b>. <br> Jam kerja Senin – Sabtu 09.00 - 20.00 WIB.
+        </p>
+        <button class="btn-primary">Join Sekarang →</button>
+      </div>
+  
+      <!-- RIGHT CONTENT -->
+      <div class="faq-right">
+        <div class="faq-item">
+          <button class="faq-question">Apakah Carabicara hanya untuk anak sekolah?</button>
+          <div class="faq-answer">Tidak. Carabicara terbuka untuk siapa saja yang ingin melatih public speaking, mulai dari pelajar, mahasiswa, hingga profesional.</div>
+        </div>
+  
+        <div class="faq-item">
+          <button class="faq-question">Apakah kelas di Carabicara cocok untuk pemula?</button>
+          <div class="faq-answer">Ya. Materi disusun mulai dari dasar, jadi cocok untuk pemula maupun yang ingin meningkatkan skill komunikasi.</div>
+        </div>
+  
+        <div class="faq-item">
+          <button class="faq-question">Bagaimana sistem belajarnya?</button>
+          <div class="faq-answer">Belajar dilakukan secara online dan offline, dengan praktik langsung, feedback, serta simulasi berbicara di depan umum.</div>
+        </div>
+  
+        <div class="faq-item">
+          <button class="faq-question">Apakah ada sertifikat?</button>
+          <div class="faq-answer">Ya, setiap peserta akan mendapatkan sertifikat resmi dari Carabicara setelah menyelesaikan program.</div>
+        </div>
+  
+        <div class="faq-item">
+          <button class="faq-question">Apakah ada jaminan bisa public speaking lebih percaya diri?</button>
+          <div class="faq-answer">Kami tidak menjanjikan instan, tapi dengan latihan konsisten bersama mentor, peserta akan jauh lebih percaya diri.</div>
+        </div>
+      </div>
+    </section>
+
     <!-- === Call To Action (Ajakan Bergabung) === -->
-    <section class="cta-section">
+    <section id="kontak" class="cta-section">
       <div class="container text-center">
         <h2>Siap Melesat Bersama Carabicara?</h2>
         <p>
           Amankan spot kamu sekarang dan jadi generasi yang tidak hanya pintar, tapi juga komunikatif!
         </p>
         <div class="cta-buttons">
-          <button class="btn white">Daftar Sekarang</button>
-          <button class="btn-outline white">Hubungi Cabi Care</button>
+<a 
+href="https://wa.me/628119708700?text=Halo%20Admin%20Cara%20Bicara%20👋🏻
+%0A%0ANama%20:%20%0ADomisili%20:%20%0AUsia%20:%20%20tahun%0A%0ASaya%20ingin%20mendaftar%20pada%20program%20pembelajaran%20di%20Carabicara.%20Mohon%20informasi%20selanjutnya%20terkait%20proses%20pendaftarannya.%20Terima%20kasih%20😊"
+target="_blank"
+class="btn white">
+Daftar Sekarang
+</a>
+
+<a 
+href="https://wa.me/628119708700?text=Halo%20Admin%20Cara%20Bicara%20👋🏻%0A%0ANama%20:%20%0ADomisili%20:%20%0AUsia%20:%20%20tahun%0A%0ASaya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20program%20dan%20informasi%20di%20Carabicara.%20Mohon%20bantuannya%20ya.%20Terima%20kasih%20😊"
+target="_blank"
+class="btn-outline white">
+Hubungi MinCa
+</a>
         </div>
-        <small>*Sertifikat, mentoring, dan laporan belajar setiap level</small>
+        <!-- <small>*Sertifikat, mentoring, dan laporan belajar setiap level</small> -->
       </div>
     </section>
 
     <!-- === Footer === -->
-    <footer id="contact" class="footer">
-      <div class="container grid">
-        <!-- Logo dan Deskripsi -->
-        <div class="footer-brand">
-          <div class="logo">
-            <img src="img/Logogram.png" alt="Logo Carabicara" class="icon" />
-            <span class="brand">Cara<span class="highlight">Bicara</span></span>
-          </div>
-          <p>
-            Lembaga pelatihan komunikasi dan public speaking bersertifikat IPSA. Belajar dengan kurikulum progresif, fun, dan terbukti hasilnya!
-          </p>
-          <div class="socials">
-            <a href="https://www.instagram.com/bisacarabicara/" class="icon blue"><img src="img/instagram.png" alt=""></a>
-            <a href="https://www.tiktok.com/@carabicara_" class="icon green"><img src="img/tiktok.png" alt=""></a>
-            <a href="https://carabicara.com" class="icon red"><img src="img/web.png" alt=""></a>
+    <footer class="footer">
+      <div class="flex-container">
+      <div class="footer-container">
+        <!-- Logo & Deskripsi -->
+        <div class="footer-about">
+          <img src="img/Logoword.png" alt="Carabicara Logo" class="footer-logo">
+          <p>Carabicara adalah platform pembelajaran public speaking & komunikasi <br> yang membantu membangun rasa percaya diri untuk semua orang.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/bisacarabicara/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@carabicara_" target="_blank"><img src="img/tiktok.png" alt="TikTok"></a>
+            <a href="https://carabicara.com" target="_blank"><img src="img/web.png" alt="Website"></a>
           </div>
         </div>
-
-        <!-- Program -->
-        <div>
-          <h3>Program</h3>
+    
+        <!-- Menu 1 -->
+        <div class="footer-menu">
+          <h4>Menus</h4>
           <ul>
-            <li><a href="#">Reguler</a></li>
-            <li><a href="#">Privat</a></li>
-            <li><a href="#">Online</a></li>
-            <li><a href="#">Special Class</a></li>
-            <li><a href="#">Kelas Institusi</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Level</a></li>
+            <li><a href="#">Testimoni</a></li>
+            <!-- <li><a href="#">Kurikulum</a></li> -->
           </ul>
         </div>
-
-        <!-- Perusahaan -->
-        <div>
-          <h3>Perusahaan</h3>
+    
+        <!-- Menu 2 -->
+        <div class="footer-menu">
+          <h4>Others</h4>
           <ul>
-            <li><a href="#">Tentang Kami</a></li>
             <li><a href="#">Mentor</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Partner Sekolah</a></li>
+            <li><a href="#">FAQ</a></li>
+            <!-- <li><a href="#">Blog</a></li> -->
+            <li><a href="#">Kontak</a></li>
           </ul>
         </div>
-
-        <!-- Kontak -->
-        <div>
-          <h3>Kontak</h3>
-          <p>📧 infocarabicara@gmail.com</p>
-          <p>📞 +62 811-9708-700 (Admin carabicara)</p>
-          <p>📍 Jl. Diponegoro No.1, Sisir, Kota Batu</p>
-          <p>    Jl. Pandan No.11a, Gading Kasri, Kota Malang</p>
+    
+        <!-- Menu 3 -->
+        <div class="footer-menu">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/bisacarabicara/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@carabicara_">TikTok</a></li>
+            <!-- <li><a href="https://facebook.com">Facebook</a></li> -->
+            <li><a href="https://wa.me/+628119708700">WhatsApp</a></li>
+          </ul>
         </div>
       </div>
+    </div>
+    
+      <!-- Disclaimer -->
+      <div class="footer-disclaimer">
+        <h4>DISCLAIMER</h4>
+        <p>
+          Informasi dalam kursus ini bersifat edukatif dan berdasarkan pengalaman mentor. 
+          Hasil setiap individu bisa berbeda tergantung usaha, pengalaman, dan komitmen. 
+          Jika tidak siap menerima hal ini, mohon tidak membeli kursus.
+        </p>
+      </div>
+    
+      <!-- Copyright -->
       <div class="footer-bottom">
-        &copy; 2025 CaraBicara. All rights reserved. #PintarSajaTidakCukup
+        <p>Copyright © 2025 Carabicara | All Rights Reserved</p>
       </div>
     </footer>
   </body>
