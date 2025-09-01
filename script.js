@@ -41,46 +41,47 @@ document.querySelectorAll(".avatar").forEach((el, index) => {
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const container = document.querySelector(".carousel-container");
-  const leftButton = document.querySelectorAll(".carousel-button.left")[0];
+  const leftButton = document.querySelector(".carousel-button.left");
   const rightButton = document.querySelector(".carousel-button.right");
+  const cards = document.querySelectorAll(".instructor-card");
 
-  let currentPosition = 0;
+  let currentIndex = 0; // simpan index aktif
 
   function getCardPerView() {
-    return window.innerWidth <= 768 ? 2 : 4;
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1023) return 3;
+    return 4;
   }
 
-  function getCardWidth() {
-    const card = document.querySelector(".instructor-card");
-    const style = window.getComputedStyle(card);
-    const width = card.offsetWidth;
-    const marginRight = parseFloat(style.marginRight || 0);
-    return width + marginRight + 20; // 20px gap antar kartu
+  function updateSlide() {
+    const cardWidth = cards[0].offsetWidth + 16; // +gap
+    const translateX = -(currentIndex * cardWidth);
+    track.style.transform = `translateX(${translateX}px)`;
   }
 
-  function scrollTrack(direction) {
+  rightButton.addEventListener("click", () => {
     const cardPerView = getCardPerView();
-    const cardWidth = getCardWidth();
-    const scrollAmount = cardWidth * cardPerView;
+    const maxIndex = cards.length - cardPerView;
 
-    const maxScroll = -(track.scrollWidth - container.offsetWidth);
-
-    if (direction === "left") {
-      currentPosition = Math.min(currentPosition + scrollAmount, 0);
-    } else {
-      currentPosition = Math.max(currentPosition - scrollAmount, maxScroll);
+    if (currentIndex < maxIndex) {
+      currentIndex += cardPerView; // geser per layar
+      if (currentIndex > maxIndex) currentIndex = maxIndex; // jangan lewat
+      updateSlide();
     }
+  });
 
-    track.style.transform = `translateX(${currentPosition}px)`;
-  }
+  leftButton.addEventListener("click", () => {
+    const cardPerView = getCardPerView();
+    if (currentIndex > 0) {
+      currentIndex -= cardPerView; // geser per layar
+      if (currentIndex < 0) currentIndex = 0;
+      updateSlide();
+    }
+  });
 
-  leftButton.addEventListener("click", () => scrollTrack("left"));
-  rightButton.addEventListener("click", () => scrollTrack("right"));
-
-  // Reset posisi saat resize untuk mencegah layout rusak
   window.addEventListener("resize", () => {
-    currentPosition = 0;
-    track.style.transform = `translateX(0px)`;
+    updateSlide(); // biar posisi tetap pas resize
   });
 });
 

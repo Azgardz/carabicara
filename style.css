@@ -469,15 +469,15 @@ a {
 }
 
 .icon-circle.green {
-  background-color: #dcfce7;
+  background-color: #dbeafe;
 }
 
 .icon-circle.purple {
-  background-color: #ede9fe;
+  background-color: #dbeafe;
 }
 
 .icon-circle.orange {
-  background-color: #fef3c7;
+  background-color: #dbeafe;
 }
 
 .icon-circle.orange img {
@@ -910,6 +910,10 @@ a {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
+.program-card h3 {
+  line-height: 1.2;
+}
+
 .program-image {
   width: 100%;
   height: 56px;
@@ -921,7 +925,7 @@ a {
 .program-card h3 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #2563eb;
+  color: #20639b;
   margin-bottom: 0.5rem;
 }
 
@@ -1155,10 +1159,6 @@ a {
   right: 8px;
 }
 
-/* ================================
-   Responsive Breakpoints
-================================ */
-
 /* 📱 Mobile (≤480px) */
 @media (max-width: 480px) {
   .instructor-section h2 {
@@ -1172,10 +1172,16 @@ a {
 
   .instructor-card {
     flex: 0 0 100%;
+    border-radius: 16px;
+    overflow: hidden;
   }
 
   .instructor-card img {
-    height: 200px;
+    width: 100%;
+    height: 380px;
+    /* max-height: 320px; */
+    object-fit: cover;
+    border-radius: 16px;
   }
 
   .carousel-button {
@@ -1183,6 +1189,10 @@ a {
     padding: 6px;
   }
 }
+
+/* .carousel-track {
+  gap: 0;
+} */
 
 /* 📱 Tablet (481px – 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
@@ -1320,10 +1330,6 @@ a {
   font-size: 0.875rem;
   color: #64748b;
 }
-
-/* ============================
-   Responsive 
-============================ */
 
 /* Mobile (≤480px) */
 @media (max-width: 480px) {
