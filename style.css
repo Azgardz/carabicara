@@ -357,11 +357,11 @@ a {
   }
 }
 
-/* Mobile */
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem;
-    height: auto;
+    padding: 15rem 1rem 19.7rem;
+    height: 108vh;
   }
 
   .hero .grid {
@@ -370,24 +370,37 @@ a {
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-buttons {
     justify-content: center;
+    gap: 0.75rem;
   }
 
   .hero-image {
+    display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.2rem;
+    margin-bottom: -3rem;
   }
 
   .hero-image img {
-    max-height: 40vh;
+    width: 100%; /* isi lebar penuh */
+    max-width: 400px; /* batas proporsional */
+    height: auto;
+    max-height: none; /* 🔑 reset supaya tidak ketahan */
+    object-fit: contain; /* biar tidak terpotong */
+    display: block;
+    margin: 0 auto; /* center */
   }
 }
 
@@ -681,8 +694,12 @@ a {
 
 .levels-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default 2 kolom */
   gap: 2rem;
-  margin-top: 2.5rem;
+  margin: 2.5rem auto;
+  width: 80%;
+  height: auto;
+  justify-content: center;
 }
 
 /* Card Style */
@@ -691,7 +708,7 @@ a {
   padding: 2rem;
   border-radius: 1rem;
   position: relative;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #bfdbfe;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -704,7 +721,6 @@ a {
   border: 2px solid #bfdbfe;
 }
 
-/* Header Line */
 .level-header {
   height: 8px;
   width: 100%;
@@ -715,7 +731,7 @@ a {
 }
 
 .level-header.green {
-  background-color: #10b981;
+  background-color: #3b82f6;
 }
 
 .level-header.blue {
@@ -723,22 +739,21 @@ a {
 }
 
 .level-header.purple {
-  background-color: #8b5cf6;
+  background-color: #3b82f6;
 }
 
-/* Badge */
 .badge {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8888px;
+  font-size: 1rem;
   font-weight: 600;
   color: #fff;
 }
 
 .badge.green {
-  background-color: #10b981;
+  background-color: #3b82f6;
 }
 
 .badge.blue {
@@ -746,10 +761,9 @@ a {
 }
 
 .badge.purple {
-  background-color: #8b5cf6;
+  background-color: #3b82f6;
 }
 
-/* Text */
 .level-card h3 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -763,7 +777,6 @@ a {
   margin-bottom: 1rem;
 }
 
-/* Features */
 .features-list {
   list-style: none;
   padding: 0;
@@ -784,8 +797,10 @@ a {
   }
 
   .levels-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 kolom */
     gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .level-card {
@@ -803,6 +818,10 @@ a {
   .features-list li {
     font-size: 0.85rem;
   }
+
+  .badge {
+    font-size: 1rem;
+  }
 }
 
 /* 💻 Tablet (641px – 1023px) */
@@ -812,8 +831,9 @@ a {
   }
 
   .levels-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
     gap: 2rem;
+    width: 90%;
   }
 
   .level-card h3 {
@@ -832,8 +852,9 @@ a {
   }
 
   .levels-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom */
     gap: 2.5rem;
+    width: 75%;
   }
 
   .level-card h3 {
@@ -1304,8 +1325,17 @@ a {
 .profile .avatar {
   width: 42px;
   height: 42px;
-  border-radius: 9999px;
   flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .profile .avatar.blue {
@@ -1719,6 +1749,7 @@ section.faq {
 .footer-socials a img {
   width: auto;
   height: 40px;
+
   transition: transform 0.3s;
 }
 
